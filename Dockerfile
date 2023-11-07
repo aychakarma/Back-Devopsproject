@@ -12,3 +12,4 @@ EXPOSE 8083
 
 # Commande pour exécuter l'application
 CMD ["java", "-jar", "newjar.jar"]
+
