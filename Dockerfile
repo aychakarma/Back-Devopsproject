@@ -1,8 +1,5 @@
-FROM openjdk:17-jdk-slim-buster
-WORKDIR /app
-
-COPY target/newjar.jar newjar.jar
-
-EXPOSE 8083
-
-ENTRYPOINT java -jar newjar.jar
+FROM openjdk:17
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+EXPOSE 8030
+ENTRYPOINT ["java", "-jar", "/app.jar"]
